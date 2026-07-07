@@ -88,7 +88,7 @@ function showSearchSuggestions() {
     if (matchedGames.length === 0) return;
 
     suggestions.innerHTML = matchedGames.map(game => 
-        `<div class="suggestion-item" onclick="selectSuggestion('${game.title}')">\${game.emoji} \${game.title}</div>`
+        `<div class="suggestion-item" onclick="selectSuggestion('${game.title}')">${game.emoji} ${game.title}</div>`
     ).join('');
 
     suggestions.classList.add('active');
