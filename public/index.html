@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuzzy Goggles - Game Proxy Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-container">
+            <div class="spinner"></div>
+            <h1>Fuzzy Goggles</h1>
+            <p>Loading your games...</p>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content" id="mainContent">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">🎮 Fuzzy Goggles</h1>
+                <p class="tagline">Your Ultimate Game Proxy Hub</p>
+            </div>
+        </header>
+
+        <!-- Search Bar -->
+        <div class="search-section">
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="searchBar" 
+                    class="search-input" 
+                    placeholder="Search games by name, genre, or tag..."
+                    autocomplete="off"
+                >
+                <span class="search-icon">🔍</span>
+                <div class="search-suggestions" id="searchSuggestions"></div>
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="action">Action</button>
+                <button class="filter-btn" data-filter="puzzle">Puzzle</button>
+                <button class="filter-btn" data-filter="strategy">Strategy</button>
+                <button class="filter-btn" data-filter="sports">Sports</button>
+            </div>
+        </div>
+
+        <!-- Games Grid -->
+        <section class="games-section">
+            <h2>Available Games</h2>
+            <div class="games-grid" id="gamesGrid">
+                <!-- Games will be populated here by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Proxy Links Section -->
+        <section class="proxies-section">
+            <h2>Other Proxy Services</h2>
+            <div class="proxies-grid">
+                <a href="https://www.node-unblocker.com/" target="_blank" class="proxy-card">
+                    <h3>Node Unblocker</h3>
+                    <p>Fast and reliable web proxy</p>
+                </a>
+                <a href="https://www.proxysite.com/" target="_blank" class="proxy-card">
+                    <h3>ProxySite</h3>
+                    <p>Anonymous web proxy</p>
+                </a>
+                <a href="https://www.hide-me.org/" target="_blank" class="proxy-card">
+                    <h3>Hide.me</h3>
+                    <p>VPN and proxy services</p>
+                </a>
+                <a href="https://www.vpnbook.com/" target="_blank" class="proxy-card">
+                    <h3>VPNBook</h3>
+                    <p>Free VPN proxy access</p>
+                </a>
+                <a href="https://www.freevpn.org/" target="_blank" class="proxy-card">
+                    <h3>FreeVPN</h3>
+                    <p>Open proxy gateway</p>
+                </a>
+                <a href="https://www.hidester.com/" target="_blank" class="proxy-card">
+                    <h3>Hidester</h3>
+                    <p>Web proxy and VPN</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 Fuzzy Goggles Game Proxy Hub | Play Anywhere, Anytime</p>
+        </footer>
+    </div>
+
+    <!-- Game Modal -->
+    <div class="modal" id="gameModal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-body">
+                <h2 id="modalGameTitle"></h2>
+                <div class="game-embed" id="gameEmbed"></div>
+                <p id="modalGameDescription"></p>
+                <button class="play-btn" id="playBtn">Play Full Screen</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="games-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
